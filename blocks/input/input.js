@@ -11,7 +11,9 @@
 
         render() {
             this.node.innerHTML = `
-            <input class="input" value="${this.options.value}" placeholder="${this.options.placeholder}"/>`;
+              <input class="input" value="${this.options.value}"
+                placeholder="${this.options.placeholder}"/>
+            `;
         }
 
     }
