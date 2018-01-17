@@ -1,22 +1,16 @@
-(function () {
-    'use strict';
+import Block from '../block';
 
-    const Block = window.Block;
+export default class Button extends Block {
 
-    class Button extends Block {
-
-        constructor(node, options = {}) {
-            super(node, options);
-        }
-
-        render() {
-            this.node.innerHTML = `
-            <button class="button">
-                ${this.options.text}
-            </button>`;
-        }
-
+    constructor(node, options = {}) {
+        super(node, options);
     }
 
-    window.Button = Button;
-})();
+    render() {
+        this.node.innerHTML = `
+        <button class="button">
+            ${this.options.text}
+        </button>`;
+    }
+
+}

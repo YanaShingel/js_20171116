@@ -1,22 +1,14 @@
-(function () {
-    'use strict';
+import Block from '../block';
 
-    const Block = window.Block;
+export default class Input extends Block {
 
-    class Input extends Block {
-
-        constructor(node, options = {}) {
-            super(node, options);
-        }
-
-        render() {
-            this.node.innerHTML = `
-              <input class="input" value="${this.options.value}"
-                placeholder="${this.options.placeholder}"/>
-            `;
-        }
-
+    constructor(node, options = {}) {
+        super(node, options);
     }
 
-    window.Input = Input;
-})();
+    render() {
+        this.node.innerHTML = `
+        <input class="input" value="${this.options.value}" placeholder="${this.options.placeholder}"/>`;
+    }
+
+}

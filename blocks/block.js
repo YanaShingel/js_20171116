@@ -1,13 +1,8 @@
-(function () {
+export default class Block {
 
-    class Block {
-
-        constructor(node, options = {}) {
-            this.node = node;
-            this.options = options;
-        }
-
+    constructor(node, options = {}) {
+        this.node = node;
+        this.options = options;
     }
 
-    window.Block = Block;
-})();
+}
