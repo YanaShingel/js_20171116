@@ -240,26 +240,7 @@ exports.default = Textarea;
 
 var pug = __webpack_require__(6);
 
-function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (name, nums) {pug_html = pug_html + "\u003Cul\u003E";
-// iterate nums
-;(function(){
-  var $$obj = nums;
-  if ('number' == typeof $$obj.length) {
-      for (var pug_index0 = 0, $$l = $$obj.length; pug_index0 < $$l; pug_index0++) {
-        var num = $$obj[pug_index0];
-pug_html = pug_html + "\u003Cspan\u003E" + (pug.escape(null == (pug_interp = num) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E";
-      }
-  } else {
-    var $$l = 0;
-    for (var pug_index0 in $$obj) {
-      $$l++;
-      var num = $$obj[pug_index0];
-pug_html = pug_html + "\u003Cspan\u003E" + (pug.escape(null == (pug_interp = num) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E";
-    }
-  }
-}).call(this);
-
-pug_html = pug_html + "\u003C\u002Ful\u003E\u003Cdiv class=\"chat\"\u003E\u003Cdiv class=\"chat_container\"\u003E\u003Cdiv class=\"chat__inner\" href=\"fadsfads\"\u003E" + (pug.escape(null == (pug_interp = name) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";}.call(this,"name" in locals_for_with?locals_for_with.name:typeof name!=="undefined"?name:undefined,"nums" in locals_for_with?locals_for_with.nums:typeof nums!=="undefined"?nums:undefined));;return pug_html;};
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (name) {pug_html = pug_html + "\u003Cdiv class=\"chat\"\u003E\u003Cdiv class=\"chat_container\"\u003E\u003Cdiv class=\"chat__inner\"\u003E" + (pug.escape(null == (pug_interp = name) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";}.call(this,"name" in locals_for_with?locals_for_with.name:typeof name!=="undefined"?name:undefined));;return pug_html;};
 module.exports = template;
 
 /***/ }),
