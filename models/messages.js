@@ -55,8 +55,8 @@ export default class Message {
     }
 
     start(done) {
-        setInterval(() => {
-            this.fetch(done);
-        }, 3000);
+        // setInterval(() => {
+        this.fetch(done);
+        // }, 3000);
     }
 }

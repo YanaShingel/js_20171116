@@ -3,7 +3,7 @@ import Textarea from "../textarea/textarea";
 import Button from "../button/button";
 
 import template from "./message-create.pug";
-import "./message-create.scss";
+// import "./message-create.scss";
 
 export default class CreateMsg extends Block {
     constructor(node, options = {}) {

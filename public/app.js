@@ -430,16 +430,16 @@ var User = function () {
     }
 
     _createClass(User, [{
-        key: 'save',
+        key: "save",
         value: function save() {
-            localStorage.setItem('user', JSON.stringify({
+            localStorage.setItem("user", JSON.stringify({
                 name: this.name
             }));
         }
     }], [{
-        key: 'load',
+        key: "load",
         value: function load() {
-            var data = localStorage.getItem('user');
+            var data = localStorage.getItem("user");
 
             if (!data) {
                 return false;
@@ -448,7 +448,7 @@ var User = function () {
             try {
                 data = JSON.parse(data);
             } catch (err) {
-                console.error('invalid user');
+                console.error("invalid user");
                 return false;
             }
 
@@ -736,37 +736,36 @@ var Chat = function (_View) {
 
         _this.node.innerHTML = (0, _chat2.default)();
 
-        _this.form = new _messageCreate2.default(document.querySelector('.js-form'));
+        _this.form = new _messageCreate2.default(document.querySelector(".js-form"));
         _this.form.render();
 
         _this.form.onSubmit = function (message) {
             _this.messages.addMessage(_this.user.name, message);
         };
-
         return _this;
     }
 
     _createClass(Chat, [{
-        key: 'addMessage',
+        key: "addMessage",
         value: function addMessage(data) {
-            var node = document.createElement('div');
+            var node = document.createElement("div");
 
             var message = new _message2.default(node, data);
             message.render();
-            this.node.querySelector('.js-list').appendChild(node);
+            this.node.querySelector(".js-list").appendChild(node);
         }
     }, {
-        key: 'onPoll',
+        key: "onPoll",
         value: function onPoll(items) {
             var _this2 = this;
 
-            this.node.querySelector('.js-list').innerHTML = '';
+            this.node.querySelector(".js-list").innerHTML = "";
             items.forEach(function (data) {
                 return _this2.addMessage(data);
             });
         }
     }, {
-        key: 'show',
+        key: "show",
         value: function show() {
             var _this3 = this;
 
@@ -774,10 +773,10 @@ var Chat = function (_View) {
             this.messages = new _messages2.default();
 
             if (!this.user) {
-                location.href = './#auth';
+                location.href = "./#auth";
             }
 
-            _get(Chat.prototype.__proto__ || Object.getPrototypeOf(Chat.prototype), 'show', this).call(this);
+            _get(Chat.prototype.__proto__ || Object.getPrototypeOf(Chat.prototype), "show", this).call(this);
             this.messages.fetch(function (items) {
                 items.forEach(function (data) {
                     return _this3.addMessage(data);
@@ -877,8 +876,6 @@ var _messageCreate = __webpack_require__(14);
 
 var _messageCreate2 = _interopRequireDefault(_messageCreate);
 
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./message-create.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -886,6 +883,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// import "./message-create.scss";
 
 var CreateMsg = function (_Block) {
     _inherits(CreateMsg, _Block);
@@ -899,18 +898,18 @@ var CreateMsg = function (_Block) {
     }
 
     _createClass(CreateMsg, [{
-        key: 'render',
+        key: "render",
         value: function render() {
             var _this2 = this;
 
             this.node.innerHTML = (0, _messageCreate2.default)();
 
-            var button = new _button2.default(this.node.querySelector('.js-submit'), {
-                text: 'Отправить'
+            var button = new _button2.default(this.node.querySelector(".js-submit"), {
+                text: "Отправить"
             });
 
-            var textarea = new _textarea2.default(this.node.querySelector('.js-textarea'), {
-                placeholder: 'Введите сообщение',
+            var textarea = new _textarea2.default(this.node.querySelector(".js-textarea"), {
+                placeholder: "Введите сообщение",
                 rows: 5
             });
 
@@ -922,7 +921,7 @@ var CreateMsg = function (_Block) {
             };
         }
     }, {
-        key: 'onSubmit',
+        key: "onSubmit",
         value: function onSubmit() {}
     }]);
 
@@ -939,7 +938,7 @@ exports.default = CreateMsg;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -952,8 +951,6 @@ var _message = __webpack_require__(15);
 
 var _message2 = _interopRequireDefault(_message);
 
-__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./message.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -962,25 +959,27 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+// import "./message.scss";
+
 var Message = function (_Block) {
-    _inherits(Message, _Block);
+	_inherits(Message, _Block);
 
-    function Message(node) {
-        var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+	function Message(node) {
+		var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-        _classCallCheck(this, Message);
+		_classCallCheck(this, Message);
 
-        return _possibleConstructorReturn(this, (Message.__proto__ || Object.getPrototypeOf(Message)).call(this, node, options));
-    }
+		return _possibleConstructorReturn(this, (Message.__proto__ || Object.getPrototypeOf(Message)).call(this, node, options));
+	}
 
-    _createClass(Message, [{
-        key: 'render',
-        value: function render() {
-            this.node.innerHTML = (0, _message2.default)(this.options);
-        }
-    }]);
+	_createClass(Message, [{
+		key: "render",
+		value: function render() {
+			this.node.innerHTML = (0, _message2.default)(this.options);
+		}
+	}]);
 
-    return Message;
+	return Message;
 }(_block2.default);
 
 exports.default = Message;
@@ -1099,12 +1098,10 @@ var Message = function () {
         value: function fetch(done) {
             var xhr = new XMLHttpRequest();
 
-            xhr.open('GET', URL);
+            xhr.open("GET", URL);
 
-            xhr.addEventListener('readystatechange', function () {
-
+            xhr.addEventListener("readystatechange", function () {
                 if (xhr.readyState === 4) {
-
                     try {
                         var data = JSON.parse(xhr.responseText);
                         done(data);
@@ -1125,14 +1122,12 @@ var Message = function () {
         value: function addMessage(user, text, done) {
             var xhr = new XMLHttpRequest();
 
-            xhr.open('POST', URL);
+            xhr.open("POST", URL);
 
-            xhr.addEventListener('readystatechange', function () {
-
+            xhr.addEventListener("readystatechange", function () {
                 if (xhr.readyState === 4) {
-
                     try {
-                        console.log('sent');
+                        console.log("sent");
                     } catch (err) {
                         console.error(err);
                     }
@@ -1151,11 +1146,9 @@ var Message = function () {
     }, {
         key: "start",
         value: function start(done) {
-            var _this = this;
-
-            setInterval(function () {
-                _this.fetch(done);
-            }, 3000);
+            // setInterval(() => {
+            this.fetch(done);
+            // }, 3000);
         }
     }]);
 
